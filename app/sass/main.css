@@ -1,0 +1,109 @@
+@import "../libs/normalize-css/normalize.css";
+@font-face {
+  font-family: "poppins-bold";
+  src: url("../fonts/Poppins-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "poppins-light";
+  src: url("../fonts/Poppins-Light.ttf") format("ttf");
+}
+@font-face {
+  font-family: "poppins-medium";
+  src: url("../fonts/Poppins-Medium.ttf") format("ttf");
+}
+@font-face {
+  font-family: "poppins-regular";
+  src: url("../fonts/Poppins-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "poppins-semiBold";
+  src: url("../fonts/Poppins-SemiBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Oswald-regular";
+  src: url("../fonts/Oswald-Regular.ttf") format("ttf");
+}
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: raleway-example, sans-serif;
+  overflow-x: hidden;
+  opacity: 1;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.main-header {
+  min-height: 100vh;
+  color: #FF1E1E;
+}
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /**/
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/
+}
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/
+}
+
+/*# sourceMappingURL=main.css.map */
