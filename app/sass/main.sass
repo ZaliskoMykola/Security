@@ -3,14 +3,343 @@
 @import "base"
 @import "vars"
 
-// my style
+//// my style
+//.grid
+//  display: grid
 
-.grid
-  display: grid
+a
+  text-decoration: none
+  color: $clr_white
+
+ul
+  list-style: none
+  display: flex
+
 
 .main-header
-  min-height: 100vh
-  //background-image: url("../img/bg0.png")
-  color: #FF1E1E
+  min-height: 1080px
+  background: url("../img/Header.png") center/cover
+  position: relative
+  padding: 0 200px
+
+  .social-network
+    position: absolute
+    bottom: 180px
+    left: 40px
+    color: $accent
+    font-size: 24px
+    cursor: pointer
+
+    .social-network__icon
+      border: none
+
+      &:hover
+        background: rgba($accent, 0.3)
+        box-shadow: 0 0 18px 3px rgba($accent, .5)
+        transition: 0.2s
+
+
+    i
+      display: block
+      margin-bottom: 50px
+
+
+  .white-block
+    position: absolute
+    width: 200px
+    height: 120px
+    background: #ffffff
+    left: 0
+    bottom: 0
+
+
+  .navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 200px
+    padding-top: 40px
+
+    &__logo
+      margin-right: 335px
+
+    &__menu
+      li
+        position: relative
+        padding: 0 35px
+        opacity: .5
+
+        &:hover
+          opacity: 1
+
+        &:before
+          width: 30px
+          height: 2px
+          border-radius: 25px
+          opacity: 0.5
+          content: ""
+          position: absolute
+          background-color: $accent
+          bottom: -15px
+          transform: translateX(-50%)
+          left: 50%
+          display: none
+          box-shadow: 0 0 10px 1px $clr_shadow
+
+        &:hover::before
+          display: block
+
+    .auth
+
+      &__btn
+        width: 130px
+        height: 50px
+        background: transparent
+        border-radius: 35px
+        border-color: transparent
+        color: $clr_white
+        font-weight: bold
+        font-size: 18px
+        cursor: pointer
+
+        &:hover
+          border: 1px solid rgba($clr_white, 0.5)
+
+
+  .header-content
+    width: 760px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-bottom: 260px
+
+    &__title
+      color: $clr_white
+      font-size: 81px
+      line-height: 95px
+      font-weight: bold
+      margin-bottom: 50px
+
+      &--color
+        color: $accent
+
+    &__text
+      width: 60%
+      color: $clr_white
+      font-size: 18px
+      line-height: 28px
+      font-family: poppins-regular
+      margin-bottom: 50px
+
+
+    &__btn
+      position: relative
+      background: none
+      height: 64px
+      width: 223px
+      cursor: pointer
+      border-radius: 35px
+      color: rgba($accent, 0.4)
+      text-transform: uppercase
+      font-size: 16px
+      line-height: 16px
+      letter-spacing: 5px
+      font-family: 'poppins-regular'
+      border: 2px solid rgba($accent, 0.4)
+
+      &:hover
+        color: rgba($accent, 1)
+        border: 2px solid rgba($accent, 1)
+        background: rgba($accent, 0.3)
+        box-shadow: 0 0 18px 3px rgba($accent, .5)
+        transition: 0.2s
+
+      .move
+        font-size: 20px
+        position: absolute
+        right: 10px
+        top: 20px
+
+
+  .header-bottom
+    display: flex
+    height: 120px
+    margin-bottom: 135px
+
+
+    &__item
+      position: relative
+      display: flex
+      flex-direction: column
+      padding: 40px 75px 60px 0
+      background: $clr_white
+      width: 280px
+      font-family: poppins-regular
+
+
+      &:first-child
+        width: 230px
+
+        &:before
+          opacity: 0.5
+          width: 36px
+          height: 1px
+          content: ""
+          display: block
+          position: absolute
+          background-color: $clr_dark
+          right: 20%
+          transform: rotate(90deg) translateX(50%)
+
+      &:nth-child(2)
+        &:before
+          opacity: 0.5
+          width: 36px
+          height: 1px
+          content: ""
+          display: block
+          position: absolute
+          background-color: $clr_dark
+          right: 20%
+          transform: rotate(90deg) translateX(50%)
+
+      .sub-text
+
+        font-size: 14px
+        color: $clr_dark
+        opacity: 0.5
+
+        &--uppercase
+          text-transform: uppercase
+
+      .main-text
+        font-size: 16px
+
+    &__btn
+      position: relative
+      width: 260px
+      border: none
+      background: $accent
+      border-radius: 0 25px 0 0
+
+
+      .btn-text
+        color: $clr_white
+        font-weight: bold
+        font-size: 18px
+        font-family: "poppins-semiBold"
+
+      .btn-icon
+        font-size: 20px
+        color: $clr_white
+        position: absolute
+        top: 50px
+        right: 40px
+
+.home-protection
+  padding: 0 200px
+
+.heading
+  &__text
+    letter-spacing: 2px
+    margin-bottom: 23px
+    font-size: 16px
+    font-family: poppins-regular
+    opacity: .7
+
+
+  &__title
+    font-family: poppins-regular
+    font-size: 50px
+    width: 577px
+
+.gallery
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  grid-gap: 27px
+  margin-bottom: 230px
+
+
+  .gallery-item
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    cursor: pointer
+    position: relative
+
+    .play-btn
+      position: absolute
+      display: flex
+      justify-content: center
+      align-items: center
+
+      width: 100%
+      height: 80px
+
+
+    &:hover
+       color: #FF1E1E
+       &::before
+        opacity: .4
+    &:before
+     content: ""
+     position: absolute
+     top: 0
+     left: 0
+     bottom: 0
+     right: 0
+     background-color: black
+     opacity: 0.65
+     transition: opacity .5s
+
+
+
+
+
+
+    &__main-text
+      left: 20px
+      bottom: 40px
+      position: absolute
+      color: $clr_white
+      font-size: 32px
+      font-family: poppins-regular
+
+
+    &__sub-text
+      left: 20px
+      bottom: 10px
+      position: absolute
+      font-family: poppins-regular
+      color: $clr_white
+      opacity: .7
+
+    &:nth-child(1)
+      background: url("../img/21725.png") center/cover
+      grid-column: 1/5
+
+      width: 100%
+      height: 480px
+
+
+
+    &:nth-child(2)
+      grid-column: 5/7
+      height: 480px
+      background: url("../img/230071-P1ZDX1-666.png") center/cover
+
+    &:nth-child(3)
+      grid-column: 1/3
+
+
+      height: 480px
+      background: url("../img/1553.png") center/cover
+
+    &:nth-child(4)
+      grid-column: 3/7
+
+      height: 480px
+      background: url("../img/11557.png") center/cover
 
 @import "media"
